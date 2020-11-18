@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  node-yarn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freeyeti/dev-in-docker:python3-gis
