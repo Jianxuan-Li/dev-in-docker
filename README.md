@@ -1,4 +1,4 @@
-## Nodejs and Yarnpkg
+## Example
 
 ### Using:
 
@@ -14,10 +14,16 @@ docker run -p 9000:9000 -v $(pwd):/code -it freeyeti/dev-in-docker:node-yarn bas
 docker push freeyeti/dev-in-docker:node-yarn
 ```
 
-## Python3 with GDAL
+## Images
 
-`docker pull freeyeti/dev-in-docker:python3-gis`
+### Nodejs and Yarnpkg
 
-## Python3 with pyspark + GDAL + mapnik
+`freeyeti/dev-in-docker:node-yarn`
 
-`docker pull freeyeti/dev-in-docker:python3-pyspark`
+### Python3 with GDAL
+
+`freeyeti/dev-in-docker:python3-gis`
+
+### Python3 with pyspark + GDAL + mapnik
+
+`freeyeti/dev-in-docker:python3-pyspark`
