@@ -14,11 +14,11 @@ ENV LANGUAGE en_US:en
 RUN echo "nameserver 1.1.1.1" >> /etc/resolv.conf
 
 RUN apt-get update -y && apt-get install -y \ 
-    wget python3 python3-pip \
+    wget python3 python3-pip python3-venv \
     # For postgis and Django gis
     gdal-bin python3-gdal \
     # Other utils
-    iputils-ping telnet net-tools vim \
+    gettext iputils-ping telnet net-tools vim \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
 
 # Project initalization

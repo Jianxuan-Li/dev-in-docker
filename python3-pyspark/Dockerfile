@@ -24,8 +24,8 @@ ENV PYSPARK_DRIVER_PYTHON /usr/bin/python3
 RUN echo "nameserver 1.1.1.1" >> /etc/resolv.conf
 
 RUN apt-get update -y && apt-get install -y \ 
-    wget python3 python3-pip gdal-bin python3-gdal \
-    mapnik-utils python3-mapnik \
+    wget python3 python3-pip gdal-bin python3-gdal python3-venv \
+    mapnik-utils python3-mapnik gettext \
     openjdk-8-jre default-jre \
     && wget -q -O spark.tgz $SPARK_DOWNLOAD_URL \
     && mkdir -p /temp_spark \
