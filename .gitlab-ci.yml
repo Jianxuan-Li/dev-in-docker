@@ -1,0 +1,50 @@
+stages:
+  - build
+
+build_node-12-yarn-2:
+  stage: build
+  when: manual
+  script:
+    - ./build node-12-yarn-2
+    - docker push freeyeti/dev-in-docker:node-12-yarn-2
+  only:
+    - master
+  tags:
+    - build
+    - shell
+
+build_node-yarn:
+  stage: build
+  when: manual
+  script:
+    - ./build node-yarn
+    - docker push freeyeti/dev-in-docker:node-yarn
+  only:
+    - master
+  tags:
+    - build
+    - shell
+
+build_python3-gis:
+  when: manual
+  stage: build
+  script:
+    - ./build python3-gis
+    - docker push freeyeti/dev-in-docker:python3-gis
+  only:
+    - master
+  tags:
+    - build
+    - shell
+
+build_python3-pyspark:
+  when: manual
+  stage: build
+  script:
+    - ./build python3-gis
+    - docker push freeyeti/dev-in-docker:python3-pyspark
+  only:
+    - master
+  tags:
+    - build
+    - shell

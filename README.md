@@ -19,6 +19,7 @@ docker push freeyeti/dev-in-docker:node-yarn
 ### Nodejs and Yarnpkg
 
 `freeyeti/dev-in-docker:node-yarn`
+`freeyeti/dev-in-docker:node-12-yarn-2`
 
 ### Python3 with GDAL
 
