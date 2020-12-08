@@ -37,6 +37,18 @@ build_python3-gis:
     - build
     - shell
 
+build_python3-gdal:
+  when: manual
+  stage: build
+  script:
+    - ./build python3-gis
+    - docker push freeyeti/dev-in-docker:python3-gdal
+  only:
+    - master
+  tags:
+    - build
+    - shell
+
 build_python3-pyspark:
   when: manual
   stage: build
