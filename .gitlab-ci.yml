@@ -41,7 +41,7 @@ build_python3-gdal:
   when: manual
   stage: build
   script:
-    - ./build python3-gis
+    - ./build python3-gdal
     - docker push freeyeti/dev-in-docker:python3-gdal
   only:
     - master
