@@ -5,4 +5,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: freeyeti/dev-in-docker:node-yarn
+    image: freeyeti/dev-in-docker:ubuntu20.04-gdal

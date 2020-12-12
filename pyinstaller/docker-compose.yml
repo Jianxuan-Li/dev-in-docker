@@ -1,8 +1,8 @@
 version: "3.5"
 
 services:
-  node-yarn:
+  stack-build:
     build:
       context: .
       dockerfile: Dockerfile
-    image: freeyeti/dev-in-docker:python3-gdal-nginx
+    image: freeyeti/dev-in-docker:pyinstaller

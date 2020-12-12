@@ -11,5 +11,6 @@ ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
 
 RUN apt-get update -y && apt-get install -y \ 
-    python3 python3-gdal python3-pip nginx \
+    python3 python3-gdal python3-pip \
+    && pip3 install --no-cache-dir pyinstaller \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*

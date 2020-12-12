@@ -5,4 +5,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: freeyeti/dev-in-docker:node-yarn
+    image: freeyeti/dev-in-docker:python3-pip-gdal
