@@ -11,12 +11,12 @@ ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
 
 # Set DNS
-RUN echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+# RUN echo "nameserver 1.1.1.1" >> /etc/resolv.conf
 
 RUN apt-get update -y && apt-get install -y \ 
     wget python3 python3-pip python3-venv \
     # For postgis and Django gis
-    gdal-bin python3-gdal \
+    gdal-bin python3-gdal pipenv \
     # Other utils
     gettext iputils-ping telnet net-tools vim \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*

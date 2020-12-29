@@ -10,7 +10,6 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
 
-RUN apt-get update -y && apt-get install -y \ 
-    python3 python3-gdal python3-pip pipenv \
-    && pip3 install --no-cache-dir pyinstaller \
+RUN apt-get update -y && apt-get install -y --no-install-recommends \ 
+    python3 python3-gdal \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
