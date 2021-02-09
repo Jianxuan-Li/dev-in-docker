@@ -1,4 +1,5 @@
-# Docker file for Python development
+# Docker file for Python GIS development
+# Do not use this image in production
 FROM ubuntu:20.04
 
 # Set timezone
@@ -16,7 +17,8 @@ ENV LANGUAGE en_US:en
 RUN apt-get update -y && apt-get install -y \ 
     wget python3 python3-pip python3-venv \
     # For postgis and Django gis
-    gdal-bin python3-gdal pipenv \
+    # libgdal-dev: for GDAL in pipenv installtion
+    gdal-bin python3-gdal libgdal-dev pipenv \
     # Other utils
     gettext iputils-ping telnet net-tools vim \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
