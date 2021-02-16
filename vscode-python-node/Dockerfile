@@ -11,7 +11,7 @@ RUN apt-get update -y  \
     && apt-get install -y \
         curl python3 python3-pip python3-venv git zsh \
         gdal-bin python3-gdal pipenv gettext \
-    && curl -fOL https://github.com/cdr/code-server/releases/download/v3.8.0/code-server_3.8.0_amd64.deb \
-    && dpkg -i code-server_3.8.0_amd64.deb \
-    && rm code-server_3.8.0_amd64.deb \
+    && curl -fOL https://github.com/cdr/code-server/releases/download/v3.9.0/code-server_3.9.0_amd64.deb \
+    && dpkg -i code-server_3.9.0_amd64.deb \
+    && rm code-server_3.9.0_amd64.deb \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
