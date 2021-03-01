@@ -9,8 +9,8 @@ ENV LANG C.UTF-8
 
 RUN apt-get update -y  \
     && apt-get install -y \
-        curl python3 python3-pip python3-venv git zsh \
-        gdal-bin python3-gdal pipenv gettext \
+        curl python3 python3-pip python3-venv git zsh vim \
+        gdal-bin python3-gdal pipenv gettext net-tools iputils-ping dnsutils \
     && curl -fOL https://github.com/cdr/code-server/releases/download/v3.9.0/code-server_3.9.0_amd64.deb \
     && dpkg -i code-server_3.9.0_amd64.deb \
     && rm code-server_3.9.0_amd64.deb \
