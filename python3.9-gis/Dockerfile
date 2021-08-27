@@ -17,11 +17,14 @@ ENV LANGUAGE en_US:en
 RUN apt-get update -y && apt-get install -y \ 
     wget python3.9 python3-pip python3-venv \
     # For postgis and Django gis
-    # libgdal-dev: for GDAL in pipenv installtion
-    gdal-bin python3-gdal libgdal-dev pipenv \
+    gdal-bin python3-gdal libgdal-dev \
     # Other utils
-    gettext iputils-ping telnet net-tools vim \
+    gettext iputils-ping telnet net-tools vim curl \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
+
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+
+ENV PATH="$PATH:$HOME/.poetry/bin"
 
 # Project initalization
 RUN mkdir /code
