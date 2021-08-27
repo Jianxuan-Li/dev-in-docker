@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  stack-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freeyeti/dev-in-docker:node-16-yarn-2
