@@ -19,15 +19,19 @@ RUN apt-get update -y && apt-get install -y \
     # For postgis and Django gis
     gdal-bin python3-gdal libgdal-dev \
     # Other utils
-    gettext iputils-ping telnet net-tools vim curl \
+    gettext iputils-ping telnet net-tools vim curl zsh git \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 
 ENV PATH="$PATH:/root/.poetry/bin"
 
+RUN wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O - | zsh || true
+
 # Project initalization
 RUN mkdir /code
 VOLUME  ["/code"]
 WORKDIR /code
 EXPOSE 8000
+
+CMD ["zsh"]
