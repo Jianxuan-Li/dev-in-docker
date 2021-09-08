@@ -3,7 +3,7 @@
 FROM ubuntu:20.04
 
 # Set timezone
-ENV TZ Etc/UTC
+ENV TZ Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Set LANG
@@ -19,7 +19,7 @@ RUN apt-get update -y && apt-get install -y \
     # For postgis and Django gis
     gdal-bin python3-gdal libgdal-dev \
     # Other utils
-    gettext iputils-ping telnet net-tools vim curl zsh git \
+    gettext iputils-ping telnet net-tools vim curl zsh git systemd \
     && apt-get autoremove -y && apt-get autoclean -y && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
