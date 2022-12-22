@@ -16,15 +16,7 @@ docker push freeyeti/dev-in-docker:node-yarn
 
 ## Images
 
-### Nodejs and Yarnpkg
+### Latest update:
 
-`freeyeti/dev-in-docker:node-yarn`
-`freeyeti/dev-in-docker:node-12-yarn-2`
-
-### Python3 with GDAL
-
-`freeyeti/dev-in-docker:python3-gis`
-
-### Python3 with pyspark + GDAL + mapnik
-
-`freeyeti/dev-in-docker:python3-pyspark`
+- freeyeti/dev-in-docker:pyinstaller5.7.0-poetry1.3.1
+- freeyeti/cedarhill-dev:python3.10-weasyprint
