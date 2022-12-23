@@ -5,4 +5,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: freeyeti/cedarhill-dev:python3.10-weasyprint
+    image: freeyeti/dev-in-docker:python3.10-poetry1.3.1-gdal-dev

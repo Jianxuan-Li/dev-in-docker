@@ -19,5 +19,5 @@ docker push freeyeti/dev-in-docker:node-yarn
 ### Latest update:
 
 - freeyeti/dev-in-docker:pyinstaller5.7.0-poetry1.3.1
-- freeyeti/cedarhill-dev:python3.10-weasyprint
+- freeyeti/dev-in-docker:python3.10-poetry1.3.1-gdal-dev
 - freeyeti/dev-in-docker:python3.10-gdal3.4.1
