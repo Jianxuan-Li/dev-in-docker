@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  stack-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freeyeti/dev-in-docker:pyinstaller5.8.0-poetry1.4.0
